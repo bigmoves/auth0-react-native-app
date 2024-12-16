@@ -100,7 +100,4 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
-  text: {
-    color: "white",
-  },
 });
