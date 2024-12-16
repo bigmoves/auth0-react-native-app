@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet } from "react-native";
 import { useAuth0 } from "react-native-auth0";
+import { router } from "expo-router";
 import Button from "@/components/Button";
 import TypewriterText from "@/components/TypewriterText";
 import { useState } from "react";
@@ -13,6 +14,7 @@ export default function Index() {
   const onPressLogin = async () => {
     try {
       await authorize();
+      router.replace("/home");
     } catch (e) {
       console.log(e);
     }
